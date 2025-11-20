@@ -2,7 +2,7 @@ name: Regular Update
 
 on:
   schedule:
-    - cron: "0 4 * * *" # Run everyday at 12am in Beijing time
+    - cron: '0 */4 * * *' # Run everyday at 12am in Beijing time
 
 jobs:
   update:
