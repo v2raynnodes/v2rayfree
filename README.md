@@ -35,7 +35,7 @@ CTRL+A网页全选，CTRL+C复制，右键点击任务栏v2rayN客户端图标�
 注：跳转链接可能会 **被墙** ，如多次打开失败，请先使用下面不稳定免费订阅后，再尝试点击链接
 
 ## v2ray免费节点订阅  
-- `https://raw.githubusercontent.com/free-nodes/v2rayfree/main/v2`  
+- ``  
 
 ## v2ray免费节点分享
 
