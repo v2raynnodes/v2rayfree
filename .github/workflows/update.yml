@@ -1,0 +1,36 @@
+name: Regular Update
+
+on:
+  schedule:
+    - cron: "0 4 * * *" # Run everyday at 12am in Beijing time
+
+jobs:
+  update:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: 3.12
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run SimpleScraper
+        run: scrapy crawl simple
+
+      - name: Run DecryptScraper
+        run: scrapy crawl decrypt
+
+      - name: Git commit and push
+        uses: GuillaumeFalourd/git-commit-push@v1
+        with:
+          commit_message: "Regular update"
+          files: config.json README.md scrapy.log nodes/*
+          force: 1
+          empty: 1
