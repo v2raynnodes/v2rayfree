@@ -44,8 +44,6 @@ CTRL+A网页全选，CTRL+C复制，右键点击任务栏v2rayN客户端图标�
 | ---- | ---- | ---- |
 | [nodes/yudou66.txt](https://raw.githubusercontent.com/v2raynnodes/clashfree/main/nodes/yudou66.txt) | [nodes/yudou66.txt](https://gh-proxy.com/raw.githubusercontent.com/v2raynnodes/clashfree/main/nodes/yudou66.txt) | 2025-11-17 |
 | [nodes/blues.txt](https://raw.githubusercontent.com/v2raynnodes/clashfree/main/nodes/blues.txt)| [nodes/blues.txt](https://gh-proxy.com/raw.githubusercontent.com/v2raynnodes/clashfree/main/nodes/blues.txt) | 2025-11-18 |
-| [nodes/clashmeta.txt](https://raw.githubusercontent.com/v2raynnodes/clashfree/main/nodes/clashmeta.txt| [nodes/clashmeta.txt](https://gh-proxy.com/raw.githubusercontent.com/v2raynnodes/clashfree/main/nodes/clashmeta.txt | 2025-10-13 |
-| [nodes/ndnode.txt](https://raw.githubusercontent.com/v2raynnodes/clashfree/main/nodes/ndnode.txt | [nodes/ndnode.txt](https://gh-proxy.com/raw.githubusercontent.com/v2raynnodes/clashfree/main/nodes/ndnode.txt)| 2025-11-19 |
 | [nodes/nodev2ray.txt](https://raw.githubusercontent.com/v2raynnodes/clashfree/main/nodes/nodev2ray.txt)| [nodes/nodev2ray.txt](https://gh-proxy.com/raw.githubusercontent.com/v2raynnodes/clashfree/main/nodes/nodev2ray.txt) | 2025-11-19 |
  | [nodes/nodefree.txt](https://raw.githubusercontent.com/v2raynnodes/clashfree/main/nodes/nodefree.txt)| [nodes/nodefree.txt](https://gh-proxy.com/raw.githubusercontent.com/v2raynnodes/clashfree/main/nodes/nodefree.txt)| 2025-11-18 |
 | [nodes/v2rayshare.txt](https://raw.githubusercontent.com/v2raynnodes/clashfree/main/nodes/v2rayshare.txt) | [nodes/v2rayshare.txt](https://gh-proxy.com/raw.githubusercontent.com/v2raynnodes/clashfree/main/nodes/v2rayshare.txt)| 2025-11-18 |
