@@ -1,1 +1,40 @@
+name: free-v2ray-node
 
+on:
+  schedule:
+    - cron: '0 0,6,12,18 * * *'
+  push:
+    paths-ignore:
+      - '**'
+  workflow_dispatch:
+
+jobs:
+  run_demo_actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          # 转到 Settings > Secrets and variables > Actions
+          # 点击 New repository secret，添加 Secret，名称为 BOT，输入你的token
+          token: ${{ secrets.BOT }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.10.10'
+
+      - name: Install requirements.txt
+        run: |
+          pip install -r ./requirements.txt
+
+      - name: Run main.py
+        run: python main.py
+
+      - name: Commit and push file
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add v2ray.txt
+          git commit -m "update" || echo "No changes to commit"
+          git push https://${{ secrets.BOT }}:x-oauth-basic@github.com/${GITHUB_REPOSITORY}.git
