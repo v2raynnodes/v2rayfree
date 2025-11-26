@@ -1,40 +1,34 @@
-name: free-v2ray-node
+name: Auto Update v2rayfree
 
 on:
   schedule:
-    - cron: '0 0,6,12,18 * * *'
-  push:
-    paths-ignore:
-      - '**'
-  workflow_dispatch:
+    - cron: '* */5 * * *'
+  workflow_dispatch: 
 
 jobs:
-  run_demo_actions:
+  update:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-        with:
-          # 转到 Settings > Secrets and variables > Actions
-          # 点击 New repository secret，添加 Secret，名称为 BOT，输入你的token
-          token: ${{ secrets.BOT }}
+    - name: Checkout code
+      uses: actions/checkout@v4
 
-      - name: Set up Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: '3.10.10'
+    - name: Update timestamp and content
+      run: |
+        sed -i "s/[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}/$(date +%Y-%m-%d)/g" README.md  
+        curl -s https://raw.githubusercontent.com/aiboboxx/v2rayfree/main/v2 > v2ray.txt
 
-      - name: Install requirements.txt
-        run: |
-          pip install -r ./requirements.txt
+    - name: Commit changes
+      run: |
+        git config --global user.name "GitHub Actions"
+        git config --global user.email "actions@github.com"
+        git add README.md v2ray.txt
+        git commit -m "自动更新: $(date +'%Y-%m-%d %H:%M')"
+        git push
 
-      - name: Run main.py
-        run: python main.py
-
-      - name: Commit and push file
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add v2ray.txt
-          git commit -m "update" || echo "No changes to commit"
-          git push https://${{ secrets.BOT }}:x-oauth-basic@github.com/${GITHUB_REPOSITORY}.git
+    - name: Delete workflow runs  
+      uses: Mattraks/delete-workflow-runs@main  
+      continue-on-error: true  
+      with:  
+        retain_days: 0  
+        keep_minimum_runs: 0 
