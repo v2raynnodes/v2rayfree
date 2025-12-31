@@ -42,7 +42,7 @@ CTRL+A网页全选，CTRL+C复制，右键点击任务栏v2rayN客户端图标�
 
 | [镜像加速订阅链接](https://gh-proxy.com/) |
 | ---- |
-| [v2ray.txt](https://gh-proxy.com/raw.githubusercontent.com/v2raynnodes/v2rayfree/refs/heads/main/v2ray.txt) | 
+| https://gh-proxy.com/raw.githubusercontent.com/v2raynnodes/v2rayfree/refs/heads/main/v2ray.txt | 
 
 
 
