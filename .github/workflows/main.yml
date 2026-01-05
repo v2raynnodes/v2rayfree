@@ -16,7 +16,7 @@ jobs:
     - name: Update timestamp and content
       run: |
         sed -i "s/[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}/$(date +%Y-%m-%d)/g" README.md  
-        curl -s https://raw.githubusercontent.com/aiboboxx/v2rayfree/main/v120260104 > v2ray.txt
+        curl -s https://raw.githubusercontent.com/aiboboxx/v2rayfree/main/v120260105 > v2ray.txt
 
     - name: Commit changes
       run: |
